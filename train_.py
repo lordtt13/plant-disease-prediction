@@ -57,3 +57,5 @@ history = model.fit_generator(
     steps_per_epoch = len(x_train) // BS,
     epochs=EPOCHS, verbose=1
     )
+
+model.save("model.h5")
