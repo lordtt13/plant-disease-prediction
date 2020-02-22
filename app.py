@@ -24,3 +24,9 @@ img = np.reshape(img,(1,img.shape[0], img.shape[1], img.shape[2]))
 labels = pickle.load(open("label_transform.pkl","rb")).classes_
 
 pred = model.predict(img)
+
+pred = pred.flatten().tolist()
+
+i = pred.index(max(pred))
+
+print(labels[i])
