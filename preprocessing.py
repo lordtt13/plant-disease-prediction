@@ -23,10 +23,6 @@ for plant_folder in root_dir :
     for plant_disease_folder in plant_disease_folder_list:
         print(f"[INFO] Processing {plant_disease_folder} ...")
         plant_disease_image_list = listdir(f"{directory_root}/{plant_folder}/{plant_disease_folder}/")
-            
-        for single_plant_disease_image in plant_disease_image_list :
-            if single_plant_disease_image == ".DS_Store" :
-                plant_disease_image_list.remove(single_plant_disease_image)
 
         for image in plant_disease_image_list[:200]:
             image_directory = f"{directory_root}/{plant_folder}/{plant_disease_folder}/{image}"
@@ -38,6 +34,6 @@ print("[INFO] Image loading completed")
 
 data_dump = image_list, label_list
 
-pickle_out = open("dict.pickle","wb")
+pickle_out = open("data.pickle","wb")
 pickle.dump(data_dump, pickle_out)
 pickle_out.close()
