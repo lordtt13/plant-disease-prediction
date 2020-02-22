@@ -4,3 +4,6 @@
 /PlantVillage
 *.csv
 *.pickle
+
+# Model Skipped
+*.h5
